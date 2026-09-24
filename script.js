@@ -1,12 +1,4 @@
-// ======================================================
-// JAVASCRIPT - 50 PRACTICE TASKS
-// Variables, Data Types, Arrays, Objects & Operators
-// ======================================================
-
-
-// ======================================================
 // VARIABLES & DATA TYPES
-// ======================================================
 
 // 1. Create a variable using let and store your name.
 // Print its data type using typeof.
