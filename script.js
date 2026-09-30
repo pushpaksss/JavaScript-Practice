@@ -1,499 +1,594 @@
-// JAVASCRIPT - 50 TASKS
-// =====================
+//50 Functions Questions    
 
+// 1. Create a function named hello that prints "Hello Everyone"
 
-// LOGICAL OPERATORS
-
-// 1. Use && to check whether 10 > 5 and 20 > 15 are true
-console.log(10 > 5 && 20 > 15);
-
-
-// 2. Use && to check whether 10 > 15 and 20 > 10 are true
-console.log(10 > 15 && 20 > 10);
-
-
-// 3. Use || to check whether 10 > 20 or 15 > 10 is true
-console.log(10 > 20 || 15 > 10);
-
-
-// 4. Use || to check whether 5 > 10 or 20 < 15 is true
-console.log(5 > 10 || 20 < 15);
-
-
-// 5. Use ! to reverse the result of 10 > 5
-console.log(!(10 > 5));
-
-
-// 6. Use ! to reverse the result of 10 < 5
-console.log(!(10 < 5));
-
-
-// 7. Create two conditions using && and ||
-let condition1 = 10 > 5;
-let condition2 = 20 > 15;
-let condition3 = 30 < 20;
-
-console.log((condition1 && condition2) || condition3);
-
-
-// 8. Create three conditions using &&, || and !
-let age1 = 20;
-let marks1 = 75;
-let certificate = true;
-
-console.log((age1 >= 18 && marks1 >= 35) || !certificate);
-
-
-// TERNARY OPERATOR
-// =================
-
-// 9. Check whether age is eligible
-let age2 = 20;
-
-console.log(age2 >= 18 ? "Eligible" : "Not Eligible");
-
-
-// 10. Check whether marks are Pass or Fail
-let marks2 = 75;
-
-console.log(marks2 >= 35 ? "Pass" : "Fail");
-
-
-// 11. Check whether number is greater than 10
-let number1 = 15;
-
-console.log(number1 > 10 ? "Greater than 10" : "10 or Less");
-
-
-// 12. Check whether number is even or odd
-let number2 = 24;
-
-console.log(number2 % 2 === 0 ? "Even" : "Odd");
-
-
-// 13. Check salary
-let salary = 40000;
-
-console.log(salary > 30000 ? "Good Salary" : "Low Salary");
-
-
-// CONCATENATION & TEMPLATE STRINGS
-// ================================
-
-// 14. First name, last name and city using +
-let firstName = "Rahul";
-let lastName = "Kumar";
-let city1 = "Hyderabad";
-
-console.log(firstName + " " + lastName + " " + city1);
-
-
-// 15. Name and age using concatenation
-let name1 = "Rahul";
-let age3 = 21;
-
-console.log("My name is " + name1 + " and my age is " + age3);
-
-
-// 16. Product, price and brand using +
-let product = "Mobile";
-let price = 25000;
-let brand = "Samsung";
-
-console.log(
-    "Product: " + product +
-    ", Price: " + price +
-    ", Brand: " + brand
-);
-
-
-// 17. Name, qualification and company using template string
-let name2 = "Rahul";
-let qualification = "B.Tech";
-let company = "TCS";
-
-console.log(
-    `My name is ${name2}, I completed ${qualification}, and I work at ${company}.`
-);
-
-
-// 18. Name, age and city using template string
-let name3 = "Rahul";
-let age4 = 21;
-let city2 = "Hyderabad";
-
-console.log(
-    `My name is ${name3}, I am ${age4} years old, and I live in ${city2}.`
-);
-
-
-// TYPE CASTING - IMPLICIT
-// ========================
-
-// 19. String + Number
-let value1 = "10";
-let value2 = 20;
-
-let result1 = value1 + value2;
-
-console.log(result1);
-console.log(typeof result1);
-
-
-// 20. Number + Number
-let number3 = 10;
-let number4 = 20;
-
-let result2 = number3 + number4;
-
-console.log(result2);
-console.log(typeof result2);
-
-
-// 21. Number + Boolean
-let number5 = 10;
-let booleanValue1 = true;
-
-let result3 = number5 + booleanValue1;
-
-console.log(result3);
-console.log(typeof result3);
-
-
-// 22. Number + null
-let number6 = 10;
-let nullValue = null;
-
-let result4 = number6 + nullValue;
-
-console.log(result4);
-console.log(typeof result4);
-
-
-// 23. String + Boolean
-let text1 = "Hello";
-let booleanValue2 = true;
-
-let result5 = text1 + booleanValue2;
-
-console.log(result5);
-console.log(typeof result5);
-
-
-// 24. String + Array
-let text2 = "Hello";
-let array1 = [1, 2, 3];
-
-let result6 = text2 + array1;
-
-console.log(result6);
-console.log(typeof result6);
-
-
-// 25. Number + Object
-let number7 = 10;
-let object1 = {};
-
-let result7 = number7 + object1;
-
-console.log(result7);
-console.log(typeof result7);
-
-
-// 26. Three different expressions
-let expression1 = 10 + true;
-let expression2 = "100" + 20;
-let expression3 = 50 + null;
-
-console.log(expression1);
-console.log(typeof expression1);
-
-console.log(expression2);
-console.log(typeof expression2);
-
-console.log(expression3);
-console.log(typeof expression3);
-
-
-// TYPE CASTING - EXPLICIT
-// =======================
-
-// 27. Convert "100" to Number
-let stringNumber1 = "100";
-
-let convertedNumber1 = Number(stringNumber1);
-
-console.log(convertedNumber1);
-
-
-// 28. Convert "25" to Number and check type
-let stringNumber2 = "25";
-
-let convertedNumber2 = Number(stringNumber2);
-
-console.log(convertedNumber2);
-console.log(typeof convertedNumber2);
-
-
-// 29. Convert true to Number
-console.log(Number(true));
-
-
-// 30. Convert false to Number
-console.log(Number(false));
-
-
-// 31. Convert empty string to Number
-console.log(Number(""));
-
-
-// 32. Convert null to Number
-console.log(Number(null));
-
-
-// 33. Convert undefined to Number
-let undefinedValue;
-
-console.log(Number(undefinedValue));
-
-
-// 34. Convert "Hello" to Boolean
-console.log(Boolean("Hello"));
-
-
-// 35. Convert empty string to Boolean
-console.log(Boolean(""));
-
-
-// 36. Convert 0, 1 and -1 to Boolean
-console.log(Boolean(0));
-console.log(Boolean(1));
-console.log(Boolean(-1));
-
-
-// 37. Convert array to Boolean
-let array2 = [];
-
-console.log(Boolean(array2));
-
-
-// 38. Convert object to Boolean
-let object2 = {};
-
-console.log(Boolean(object2));
-
-
-// CONDITIONAL STATEMENTS
-// ======================
-
-// 39. Check age using if
-let age5 = 20;
-
-if (age5 >= 18) {
-    console.log("Eligible");
+function hello() {
+    console.log("Hello Everyone");
 }
 
+hello();
 
-// 40. Check voting eligibility using if...else
-let age6 = 20;
 
-if (age6 >= 18) {
-    console.log("Eligible to Vote");
-} else {
-    console.log("Not Eligible to Vote");
+// 2. Create a function named welcome that prints
+ 
+function welcome() {
+    console.log("Welcome to JavaScript");
 }
 
+welcome();
 
-// 41. Check Pass or Fail
-let marks3 = 75;
 
-if (marks3 >= 35) {
-    console.log("Pass");
-} else {
-    console.log("Fail");
+// 3. Create a function named navi that prints your name
+
+function navi() {
+    console.log("Rahul");
 }
 
+navi();
 
-// 42. Display time of day
-let time = 15;
 
-if (time >= 1 && time <= 6) {
-    console.log("Early Morning");
-} else if (time >= 7 && time <= 12) {
-    console.log("Morning");
-} else if (time >= 13 && time <= 17) {
-    console.log("Afternoon");
-} else if (time >= 18 && time <= 19) {
-    console.log("Evening");
-} else if (time >= 20 && time <= 24) {
-    console.log("Night");
-} else {
-    console.log("Invalid Time");
+// 4. Create a function named message that prints three different messages
+
+function message() {
+    console.log("Hello");
+    console.log("Welcome");
+    console.log("Good Morning");
 }
 
-
-// 43. Check temperature
-let temperature = 30;
-
-if (temperature > 35) {
-    console.log("Hot");
-} else if (temperature >= 20 && temperature <= 35) {
-    console.log("Normal");
-} else {
-    console.log("Cold");
-}
+message();
 
 
-// 44. Nested if
-let age7 = 20;
-let height = 175;
-let weight = 65;
+// 5. Create a function named numbers that prints numbers from 1 to 5 using a for loop
 
-if (age7 >= 18) {
-
-    if (height >= 170) {
-
-        if (weight >= 60) {
-            console.log("Eligible");
-        } else {
-            console.log("Not Eligible");
-        }
-
-    } else {
-        console.log("Not Eligible");
+function numbers() {
+    for (let i = 1; i <= 5; i++) {
+        console.log(i);
     }
-
-} else {
-    console.log("Not Eligible");
 }
 
+numbers();
 
-// SWITCH STATEMENT
-// ================
 
-// 45. Traffic light
-let trafficLight = "red";
+// 6. Create a function named check that contains an if condition
 
-switch (trafficLight) {
+function check() {
+    let age = 20;
 
-    case "red":
-        console.log("Stop");
-        break;
-
-    case "yellow":
-        console.log("Get Ready");
-        break;
-
-    case "green":
-        console.log("Go");
-        break;
-
-    default:
-        console.log("Invalid Traffic Light");
+    if (age >= 18) {
+        console.log("Eligible");
+    }
 }
 
+check();
 
-// 46. Day using switch
-let day = "Monday";
 
-switch (day) {
+// 7. Create a function named details that prints name, qualification and role
 
-    case "Monday":
-        console.log("Monday");
-        break;
-
-    case "Tuesday":
-        console.log("Tuesday");
-        break;
-
-    case "Wednesday":
-        console.log("Wednesday");
-        break;
-
-    case "Thursday":
-        console.log("Thursday");
-        break;
-
-    case "Friday":
-        console.log("Friday");
-        break;
-
-    case "Saturday":
-        console.log("Saturday");
-        break;
-
-    case "Sunday":
-        console.log("Sunday");
-        break;
-
-    default:
-        console.log("Invalid Day");
+function details() {
+    console.log("Name: Rahul");
+    console.log("Qualification: B.Tech");
+    console.log("Role: Software Developer");
 }
 
+details();
 
-// 47. Menu choice
-let choice = 2;
 
-switch (choice) {
+// 8. Create a function named company that prints your company name
 
-    case 1:
-        console.log("Start");
-        break;
-
-    case 2:
-        console.log("Settings");
-        break;
-
-    case 3:
-        console.log("Exit");
-        break;
-
-    default:
-        console.log("Invalid Choice");
+function company() {
+    console.log("TCS");
 }
 
+company();
 
-// LOOPS
-// ========
 
-// 48. Print numbers from 1 to 10 using for loop
+// 9. Create a function named welcomeUser and call it three times
 
-for (let i = 1; i <= 10; i++) {
-    console.log(i);
+function welcomeUser() {
+    console.log("Welcome User");
 }
 
+welcomeUser();
+welcomeUser();
+welcomeUser();
 
-// 49. Print numbers from 10 to 1 using while loop
 
-let i = 10;
+// 10. Create two different functions and call both
 
-while (i >= 1) {
-    console.log(i);
-    i--;
+function firstFunction() {
+    console.log("This is the first function");
 }
 
-
-// 50. for...of and for...in
-
-let fruits = [
-    "Apple",
-    "Mango",
-    "Banana",
-    "Orange",
-    "Grapes"
-];
-
-for (let fruit of fruits) {
-    console.log(fruit);
+function secondFunction() {
+    console.log("This is the second function");
 }
 
+firstFunction();
+secondFunction();
 
-let employee = {
+
+
+// PARAMETERS & ARGUMENTS
+
+// 11. Create a function with one parameter and print the parameter value
+
+function printValue(value) {
+    console.log(value);
+}
+
+printValue("JavaScript");
+
+
+// 12. Create a function with two parameters and print both values
+
+function printTwoValues(a, b) {
+    console.log(a);
+    console.log(b);
+}
+
+printTwoValues(10, 20);
+
+
+// 13. Create add(a, b)
+
+function add(a, b) {
+    console.log(a + b);
+}
+
+add(10, 20);
+
+
+// 14. Create sub(a, b)
+
+function sub(a, b) {
+    console.log(a - b);
+}
+
+sub(20, 10);
+
+
+// 15. Create multiply(a, b)
+
+function multiply(a, b) {
+    console.log(a * b);
+}
+
+multiply(10, 5);
+
+
+// 16. Create divide(a, b)
+
+function divide(a, b) {
+    console.log(a / b);
+}
+
+divide(20, 5);
+
+
+// 17. Create student(name, age)
+
+function student(name, age) {
+    console.log("Name: " + name);
+    console.log("Age: " + age);
+}
+
+student("Rahul", 21);
+
+
+// 18. Create employee(name, role, salary)
+
+function employee(name, role, salary) {
+    console.log("Name: " + name);
+    console.log("Role: " + role);
+    console.log("Salary: " + salary);
+}
+
+employee("Rahul", "Developer", 40000);
+
+
+// 19. Create a function with four parameters
+
+function fourParameters(a, b, c, d) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+}
+
+fourParameters("Rahul", 21, "B.Tech", "Hyderabad");
+
+
+// 20. Create a function with six parameters
+
+function sixParameters(a, b, c, d, e, f) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+    console.log(f);
+}
+
+sixParameters(
+    "Rahul",
+    21,
+    "B.Tech",
+    "Developer",
+    "Hyderabad",
+    40000
+);
+
+
+
+// DEFAULT PARAMETERS
+
+// 21. student(name, department, cgpa) --> department has a default value
+
+function studentDetails(name, department = "CSE", cgpa) {
+    console.log(name);
+    console.log(department);
+    console.log(cgpa);
+}
+
+studentDetails("Rahul", undefined, 8.5);
+
+
+// 22. user(name, age = 18) --> Call without passing age
+
+function user(name, age = 18) {
+    console.log("Name: " + name);
+    console.log("Age: " + age);
+}
+
+user("Rahul");
+
+
+// 23. employee(name, role = "Developer")
+
+function employeeDetails(name, role = "Developer") {
+    console.log("Name: " + name);
+    console.log("Role: " + role);
+}
+
+employeeDetails("Rahul");
+
+
+// 24. form(name, department, cgpa, disability = "no") --> Call it twice
+
+function form(name, department, cgpa, disability = "no") {
+    console.log("Name: " + name);
+    console.log("Department: " + department);
+    console.log("CGPA: " + cgpa);
+    console.log("Disability: " + disability);
+}
+
+form("Ram", "CSE", 8.5);
+
+form("Likitha", "ECE", 9.0, "yes");
+
+
+// 25. Two normal parameters and one default parameter
+
+function course(name, duration, mode = "Online") {
+    console.log("Name: " + name);
+    console.log("Duration: " + duration);
+    console.log("Mode: " + mode);
+}
+
+course("JavaScript", "3 Months");
+
+
+
+// RETURN Function
+
+// 26. Function returns addition
+
+function addReturn(a, b) {
+    return a + b;
+}
+
+let result1 = addReturn(10, 20);
+console.log(result1);
+
+
+// 27. Function returns subtraction
+
+function subReturn(a, b) {
+    return a - b;
+}
+
+let result2 = subReturn(20, 10);
+console.log(result2);
+
+
+// 28. Function returns multiplication
+
+function multiplyReturn(a, b) {
+    return a * b;
+}
+
+let result3 = multiplyReturn(10, 5);
+console.log(result3);
+
+
+// 29. Function returns division
+
+function divideReturn(a, b) {
+    return a / b;
+}
+
+let result4 = divideReturn(20, 5);
+console.log(result4);
+
+
+// 30. salary() returns 40000
+
+function salary() {
+    return 40000;
+}
+
+let employeeSalary = salary();
+
+console.log(employeeSalary);
+
+
+// 31. Accept salary and return salary
+
+function getSalary(salary) {
+    return salary;
+}
+
+let salaryValue = getSalary(50000);
+
+console.log(salaryValue);
+
+
+// 32. Function returns person's name
+
+function getName() {
+    return "Rahul";
+}
+
+let personName = getName();
+
+console.log(personName);
+
+
+// 33. Return Pass or Fail
+
+function checkMarks(marks) {
+
+    if (marks >= 35) {
+        return "Pass";
+    } else {
+        return "Fail";
+    }
+}
+
+let markResult = checkMarks(75);
+
+console.log(markResult);
+
+
+// 34. Accept price and discount Return discount value
+
+function getDiscount(price, discount) {
+    return discount;
+}
+
+let discountValue = getDiscount(1000, 10);
+
+console.log(discountValue);
+
+
+// 35. Return result from one function and use it in another function
+
+function addition(a, b) {
+    return a + b;
+}
+
+function displayResult(value) {
+    console.log(value);
+}
+
+let additionResult = addition(10, 20);
+
+displayResult(additionResult);
+
+
+
+// OUTER SCOPE
+
+// 36. Variable outside function
+
+let message1 = "Hello JavaScript";
+
+function showMessage() {
+    console.log(message1);
+}
+
+showMessage();
+
+
+// 37. Object outside function
+
+let person = {
     name: "Rahul",
-    role: "Software Developer",
-    experience: 2
+    designation: "Developer"
 };
 
-for (let key in employee) {
-    console.log(key + " : " + employee[key]);
+function showPerson() {
+    console.log(person.name);
+    console.log(person.designation);
 }
+
+showPerson();
+
+
+// 38. Salary outside function
+
+let salaryAmount = 40000;
+
+function addBonus() {
+    let bonus = 5000;
+    console.log(salaryAmount + bonus);
+}
+
+addBonus();
+
+
+// 39. Employee object outside function
+
+let employeeInfo = {
+    name: "Rahul",
+    role: "Software Developer",
+    salary: 50000
+};
+
+function showEmployee() {
+    console.log(employeeInfo.name);
+    console.log(employeeInfo.role);
+    console.log(employeeInfo.salary);
+}
+
+showEmployee();
+
+
+// 40. Two functions accessing same outer variable
+
+let companyName = "TCS";
+
+function showCompany() {
+    console.log(companyName);
+}
+
+function printCompany() {
+    console.log(companyName);
+}
+
+showCompany();
+printCompany();
+
+
+
+// NAMED, ANONYMOUS & ARROW FUNCTIONS
+
+// 41. Named function
+
+function namedFunction(value) {
+    console.log(value);
+}
+
+namedFunction("Hello");
+
+
+// 42. Anonymous function stored in a variable
+
+let anonymousFunction = function(value) {
+    console.log(value);
+};
+
+anonymousFunction("Anonymous Function");
+
+
+// 43. Arrow function with one parameter
+
+let arrowFunction = (value) => {
+    console.log(value);
+};
+
+arrowFunction("Arrow Function");
+
+
+// 44. Arrow function with two parameters
+
+let arrowAdd = (a, b) => {
+    return a + b;
+};
+
+console.log(arrowAdd(10, 20));
+
+
+// 45. Named, anonymous and arrow functions
+// performing the same addition
+
+function namedAdd(a, b) {
+    return a + b;
+}
+
+let anonymousAdd = function(a, b) {
+    return a + b;
+};
+
+let arrowAddition = (a, b) => {
+    return a + b;
+};
+
+console.log(namedAdd(10, 20));
+console.log(anonymousAdd(10, 20));
+console.log(arrowAddition(10, 20));
+
+
+
+// IIFE
+
+
+// 46. IIFE that immediately prints
+
+(function() {
+    console.log("Hello JavaScript");
+})();
+
+
+// 47. IIFE with name parameter
+
+(function(name) {
+    console.log("Hello " + name);
+})("Rahul");
+
+
+// 48. IIFE with product and discount parameters
+
+(function(product, discount) {
+    console.log(
+        "Special Offer: " + product +
+        " with " + discount + "% discount"
+    );
+})("Laptop", 20);
+
+
+
+// CALLBACK & HIGHER-ORDER FUNCTIONS
+
+// 49. add function accepts a callback and two numbers
+
+function addCallback(callback, a, b) {
+
+    let result = a + b;
+
+    console.log("Addition: " + result);
+
+    callback(a, b);
+}
+
+function callbackFunction(a, b) {
+    console.log("Callback executed");
+}
+
+addCallback(callbackFunction, 10, 20);
+
+
+// 50. sub function passed as callback to add
+
+function subCallback(a, b) {
+    console.log("Subtraction: " + (a - b));
+}
+
+function addWithCallback(callback, a, b) {
+
+    console.log("Addition: " + (a + b));
+
+    callback(a, b);
+}
+
+addWithCallback(subCallback, 20, 10);
