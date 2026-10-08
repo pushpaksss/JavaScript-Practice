@@ -1,4 +1,3 @@
-//50 Functions Questions    
 
 // 1. Create a function named hello that prints "Hello Everyone"
 
@@ -10,7 +9,8 @@ hello();
 
 
 // 2. Create a function named welcome that prints
- 
+// "Welcome to JavaScript" and call it
+
 function welcome() {
     console.log("Welcome to JavaScript");
 }
@@ -21,7 +21,7 @@ welcome();
 // 3. Create a function named navi that prints your name
 
 function navi() {
-    console.log("Rahul");
+    console.log("pushpak");
 }
 
 navi();
@@ -38,7 +38,7 @@ function message() {
 message();
 
 
-// 5. Create a function named numbers that prints numbers from 1 to 5 using a for loop
+// 5. Create a function named numbers that prints , numbers from 1 to 5 using a for loop
 
 function numbers() {
     for (let i = 1; i <= 5; i++) {
@@ -65,18 +65,18 @@ check();
 // 7. Create a function named details that prints name, qualification and role
 
 function details() {
-    console.log("Name: Rahul");
+    console.log("Name: Pushpak");
     console.log("Qualification: B.Tech");
-    console.log("Role: Software Developer");
+    console.log("Role: FULL STACK Developer");
 }
 
 details();
 
 
-// 8. Create a function named company that prints your company name
+// 8. Create a function named company that prints, your company name
 
 function company() {
-    console.log("TCS");
+    console.log("STACKLY");
 }
 
 company();
@@ -108,7 +108,6 @@ secondFunction();
 
 
 
-// PARAMETERS & ARGUMENTS
 
 // 11. Create a function with one parameter and print the parameter value
 
@@ -183,7 +182,7 @@ function employee(name, role, salary) {
     console.log("Salary: " + salary);
 }
 
-employee("Rahul", "Developer", 40000);
+employee("Pushpak", "Developer", 40000);
 
 
 // 19. Create a function with four parameters
@@ -195,7 +194,7 @@ function fourParameters(a, b, c, d) {
     console.log(d);
 }
 
-fourParameters("Rahul", 21, "B.Tech", "Hyderabad");
+fourParameters("Pushpak", 25, "B.Tech", "Hyderabad");
 
 
 // 20. Create a function with six parameters
@@ -210,19 +209,18 @@ function sixParameters(a, b, c, d, e, f) {
 }
 
 sixParameters(
-    "Rahul",
-    21,
+    "Pushpak",
+    25,
     "B.Tech",
-    "Developer",
+    "FULL STACK Developer",
     "Hyderabad",
     40000
 );
 
 
 
-// DEFAULT PARAMETERS
-
-// 21. student(name, department, cgpa) --> department has a default value
+// 21. student(name, department, cgpa)
+// department has a default value
 
 function studentDetails(name, department = "CSE", cgpa) {
     console.log(name);
@@ -230,17 +228,17 @@ function studentDetails(name, department = "CSE", cgpa) {
     console.log(cgpa);
 }
 
-studentDetails("Rahul", undefined, 8.5);
+studentDetails("Pushpak", undefined, 8.5);
 
 
-// 22. user(name, age = 18) --> Call without passing age
+// 22. user(name, age = 18) . Call without passing age
 
 function user(name, age = 18) {
     console.log("Name: " + name);
     console.log("Age: " + age);
 }
 
-user("Rahul");
+user("Pushpak");
 
 
 // 23. employee(name, role = "Developer")
@@ -250,10 +248,10 @@ function employeeDetails(name, role = "Developer") {
     console.log("Role: " + role);
 }
 
-employeeDetails("Rahul");
+employeeDetails("Pushpak");
 
 
-// 24. form(name, department, cgpa, disability = "no") --> Call it twice
+// 24. form(name, department, cgpa, disability = "no") :  Call it twice
 
 function form(name, department, cgpa, disability = "no") {
     console.log("Name: " + name);
@@ -262,9 +260,9 @@ function form(name, department, cgpa, disability = "no") {
     console.log("Disability: " + disability);
 }
 
-form("Ram", "CSE", 8.5);
+form("Pushpak", "ECE", 8.5);
 
-form("Likitha", "ECE", 9.0, "yes");
+form("Priya", "ECE", 9.0, "yes");
 
 
 // 25. Two normal parameters and one default parameter
@@ -278,8 +276,6 @@ function course(name, duration, mode = "Online") {
 course("JavaScript", "3 Months");
 
 
-
-// RETURN Function
 
 // 26. Function returns addition
 
@@ -370,7 +366,7 @@ let markResult = checkMarks(75);
 console.log(markResult);
 
 
-// 34. Accept price and discount Return discount value
+// 34. Accept price and discount , Return discount value
 
 function getDiscount(price, discount) {
     return discount;
@@ -397,9 +393,8 @@ displayResult(additionResult);
 
 
 
-// OUTER SCOPE
-
 // 36. Variable outside function
+// Access it inside function
 
 let message1 = "Hello JavaScript";
 
@@ -413,7 +408,7 @@ showMessage();
 // 37. Object outside function
 
 let person = {
-    name: "Rahul",
+    name: "Pushpak",
     designation: "Developer"
 };
 
@@ -425,7 +420,7 @@ function showPerson() {
 showPerson();
 
 
-// 38. Salary outside function
+// 38. Salary outside function , Add bonus
 
 let salaryAmount = 40000;
 
@@ -440,8 +435,8 @@ addBonus();
 // 39. Employee object outside function
 
 let employeeInfo = {
-    name: "Rahul",
-    role: "Software Developer",
+    name: "Pushpak",
+    role: "FULL STACK Developer",
     salary: 50000
 };
 
@@ -456,7 +451,7 @@ showEmployee();
 
 // 40. Two functions accessing same outer variable
 
-let companyName = "TCS";
+let companyName = "STACKLY";
 
 function showCompany() {
     console.log(companyName);
@@ -470,8 +465,6 @@ showCompany();
 printCompany();
 
 
-
-// NAMED, ANONYMOUS & ARROW FUNCTIONS
 
 // 41. Named function
 
@@ -530,10 +523,9 @@ console.log(arrowAddition(10, 20));
 
 
 
-// IIFE
-
 
 // 46. IIFE that immediately prints
+// "Hello JavaScript"
 
 (function() {
     console.log("Hello JavaScript");
@@ -544,7 +536,7 @@ console.log(arrowAddition(10, 20));
 
 (function(name) {
     console.log("Hello " + name);
-})("Rahul");
+})("Pushpak");
 
 
 // 48. IIFE with product and discount parameters
@@ -560,7 +552,7 @@ console.log(arrowAddition(10, 20));
 
 // CALLBACK & HIGHER-ORDER FUNCTIONS
 
-// 49. add function accepts a callback and two numbers
+//  49. add function accepts a callback and two numbers , Add the numbers and then call the callback
 
 function addCallback(callback, a, b) {
 
@@ -578,7 +570,7 @@ function callbackFunction(a, b) {
 addCallback(callbackFunction, 10, 20);
 
 
-// 50. sub function passed as callback to add
+// 50. sub function passed as callback to add , Add first, then execute subtraction
 
 function subCallback(a, b) {
     console.log("Subtraction: " + (a - b));
