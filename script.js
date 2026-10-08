@@ -1,586 +1,534 @@
+// 1. Curried function that accepts 3 numbers and prints their sum
+function addCurried(a) {
+    return function(b) {
+        return function(c) {
+            console.log("1.", a + b + c);
+        };
+    };
+}
+addCurried(10)(20)(30);
 
-// 1. Create a function named hello that prints "Hello Everyone"
 
-function hello() {
-    console.log("Hello Everyone");
+// 2. Curried function for name, department, and salary
+function employeeCurried(name) {
+    return function(department) {
+        return function(salary) {
+            console.log("2.", name, department, salary);
+        };
+    };
+}
+employeeCurried("Pushpak")("IT")(50000);
+
+
+// 3. Curried function that accepts 3 numbers and prints multiplication
+function multiplyCurried(a) {
+    return function(b) {
+        return function(c) {
+            console.log("3.", a * b * c);
+        };
+    };
+}
+multiplyCurried(2)(3)(4);
+
+
+// 4. Convert a curried function into an uncurried function
+function curriedExample(a) {
+    return function(b) {
+        return function(c) {
+            return a + b + c;
+        };
+    };
 }
 
-hello();
-
-
-// 2. Create a function named welcome that prints
-// "Welcome to JavaScript" and call it
-
-function welcome() {
-    console.log("Welcome to JavaScript");
+function uncurriedExample(a, b, c) {
+    console.log("4.", curriedExample(a)(b)(c));
 }
 
-welcome();
+uncurriedExample(10, 20, 30);
 
 
-// 3. Create a function named navi that prints your name
-
-function navi() {
-    console.log("pushpak");
+// 5. Curried and uncurried versions of adding 4 numbers
+function addFourCurried(a) {
+    return function(b) {
+        return function(c) {
+            return function(d) {
+                return a + b + c + d;
+            };
+        };
+    };
 }
 
-navi();
-
-
-// 4. Create a function named message that prints three different messages
-
-function message() {
-    console.log("Hello");
-    console.log("Welcome");
-    console.log("Good Morning");
+function addFourUncurried(a, b, c, d) {
+    return a + b + c + d;
 }
 
-message();
+console.log("5. Curried:", addFourCurried(10)(20)(30)(40));
+console.log("5. Uncurried:", addFourUncurried(10, 20, 30, 40));
 
 
-// 5. Create a function named numbers that prints , numbers from 1 to 5 using a for loop
+// 6. Merge two arrays using array spread
+let spreadNumbers1 = [10, 20, 30, 40, 50];
+let spreadNumbers2 = [60, 70, 80, 90, 100];
 
-function numbers() {
-    for (let i = 1; i <= 5; i++) {
-        console.log(i);
-    }
-}
+let mergedSpreadNumbers = [...spreadNumbers1, ...spreadNumbers2];
 
-numbers();
+console.log("6.", mergedSpreadNumbers);
 
 
-// 6. Create a function named check that contains an if condition
+// 7. Merge two student name arrays using spread
+let students1 = ["Pushpak", "Priya", "Amit"];
+let students2 = ["Sneha", "Arjun", "Kiran"];
 
-function check() {
-    let age = 20;
+let allStudents = [...students1, ...students2];
 
-    if (age >= 18) {
-        console.log("Eligible");
-    }
-}
+console.log("7.", allStudents);
 
-check();
 
+// 8. Copy an array and add 3 new values using spread
+let originalValues = [10, 20, 30, 40];
 
-// 7. Create a function named details that prints name, qualification and role
+let newValues = [...originalValues, 50, 60, 70];
 
-function details() {
-    console.log("Name: Pushpak");
-    console.log("Qualification: B.Tech");
-    console.log("Role: FULL STACK Developer");
-}
+console.log("8.", newValues);
 
-details();
 
-
-// 8. Create a function named company that prints, your company name
-
-function company() {
-    console.log("STACKLY");
-}
-
-company();
-
-
-// 9. Create a function named welcomeUser and call it three times
-
-function welcomeUser() {
-    console.log("Welcome User");
-}
-
-welcomeUser();
-welcomeUser();
-welcomeUser();
-
-
-// 10. Create two different functions and call both
-
-function firstFunction() {
-    console.log("This is the first function");
-}
-
-function secondFunction() {
-    console.log("This is the second function");
-}
-
-firstFunction();
-secondFunction();
-
-
-
-
-// 11. Create a function with one parameter and print the parameter value
-
-function printValue(value) {
-    console.log(value);
-}
-
-printValue("JavaScript");
-
-
-// 12. Create a function with two parameters and print both values
-
-function printTwoValues(a, b) {
-    console.log(a);
-    console.log(b);
-}
-
-printTwoValues(10, 20);
-
-
-// 13. Create add(a, b)
-
-function add(a, b) {
-    console.log(a + b);
-}
-
-add(10, 20);
-
-
-// 14. Create sub(a, b)
-
-function sub(a, b) {
-    console.log(a - b);
-}
-
-sub(20, 10);
-
-
-// 15. Create multiply(a, b)
-
-function multiply(a, b) {
-    console.log(a * b);
-}
-
-multiply(10, 5);
-
-
-// 16. Create divide(a, b)
-
-function divide(a, b) {
-    console.log(a / b);
-}
-
-divide(20, 5);
-
-
-// 17. Create student(name, age)
-
-function student(name, age) {
-    console.log("Name: " + name);
-    console.log("Age: " + age);
-}
-
-student("Rahul", 21);
-
-
-// 18. Create employee(name, role, salary)
-
-function employee(name, role, salary) {
-    console.log("Name: " + name);
-    console.log("Role: " + role);
-    console.log("Salary: " + salary);
-}
-
-employee("Pushpak", "Developer", 40000);
-
-
-// 19. Create a function with four parameters
-
-function fourParameters(a, b, c, d) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-}
-
-fourParameters("Pushpak", 25, "B.Tech", "Hyderabad");
-
-
-// 20. Create a function with six parameters
-
-function sixParameters(a, b, c, d, e, f) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-    console.log(e);
-    console.log(f);
-}
-
-sixParameters(
-    "Pushpak",
-    25,
-    "B.Tech",
-    "FULL STACK Developer",
-    "Hyderabad",
-    40000
-);
-
-
-
-// 21. student(name, department, cgpa)
-// department has a default value
-
-function studentDetails(name, department = "CSE", cgpa) {
-    console.log(name);
-    console.log(department);
-    console.log(cgpa);
-}
-
-studentDetails("Pushpak", undefined, 8.5);
-
-
-// 22. user(name, age = 18) . Call without passing age
-
-function user(name, age = 18) {
-    console.log("Name: " + name);
-    console.log("Age: " + age);
-}
-
-user("Pushpak");
-
-
-// 23. employee(name, role = "Developer")
-
-function employeeDetails(name, role = "Developer") {
-    console.log("Name: " + name);
-    console.log("Role: " + role);
-}
-
-employeeDetails("Pushpak");
-
-
-// 24. form(name, department, cgpa, disability = "no") :  Call it twice
-
-function form(name, department, cgpa, disability = "no") {
-    console.log("Name: " + name);
-    console.log("Department: " + department);
-    console.log("CGPA: " + cgpa);
-    console.log("Disability: " + disability);
-}
-
-form("Pushpak", "ECE", 8.5);
-
-form("Priya", "ECE", 9.0, "yes");
-
-
-// 25. Two normal parameters and one default parameter
-
-function course(name, duration, mode = "Online") {
-    console.log("Name: " + name);
-    console.log("Duration: " + duration);
-    console.log("Mode: " + mode);
-}
-
-course("JavaScript", "3 Months");
-
-
-
-// 26. Function returns addition
-
-function addReturn(a, b) {
-    return a + b;
-}
-
-let result1 = addReturn(10, 20);
-console.log(result1);
-
-
-// 27. Function returns subtraction
-
-function subReturn(a, b) {
-    return a - b;
-}
-
-let result2 = subReturn(20, 10);
-console.log(result2);
-
-
-// 28. Function returns multiplication
-
-function multiplyReturn(a, b) {
-    return a * b;
-}
-
-let result3 = multiplyReturn(10, 5);
-console.log(result3);
-
-
-// 29. Function returns division
-
-function divideReturn(a, b) {
-    return a / b;
-}
-
-let result4 = divideReturn(20, 5);
-console.log(result4);
-
-
-// 30. salary() returns 40000
-
-function salary() {
-    return 40000;
-}
-
-let employeeSalary = salary();
-
-console.log(employeeSalary);
-
-
-// 31. Accept salary and return salary
-
-function getSalary(salary) {
-    return salary;
-}
-
-let salaryValue = getSalary(50000);
-
-console.log(salaryValue);
-
-
-// 32. Function returns person's name
-
-function getName() {
-    return "Rahul";
-}
-
-let personName = getName();
-
-console.log(personName);
-
-
-// 33. Return Pass or Fail
-
-function checkMarks(marks) {
-
-    if (marks >= 35) {
-        return "Pass";
-    } else {
-        return "Fail";
-    }
-}
-
-let markResult = checkMarks(75);
-
-console.log(markResult);
-
-
-// 34. Accept price and discount , Return discount value
-
-function getDiscount(price, discount) {
-    return discount;
-}
-
-let discountValue = getDiscount(1000, 10);
-
-console.log(discountValue);
-
-
-// 35. Return result from one function and use it in another function
-
-function addition(a, b) {
-    return a + b;
-}
-
-function displayResult(value) {
-    console.log(value);
-}
-
-let additionResult = addition(10, 20);
-
-displayResult(additionResult);
-
-
-
-// 36. Variable outside function
-// Access it inside function
-
-let message1 = "Hello JavaScript";
-
-function showMessage() {
-    console.log(message1);
-}
-
-showMessage();
-
-
-// 37. Object outside function
-
-let person = {
+// 9. Merge two employee objects using object spread
+let employeeOne = {
     name: "Pushpak",
-    designation: "Developer"
+    department: "IT"
 };
 
-function showPerson() {
-    console.log(person.name);
-    console.log(person.designation);
-}
+let employeeTwo = {
+    designation: "Developer",
+    experience: 2
+};
 
-showPerson();
+let mergedEmployee = {
+    ...employeeOne,
+    ...employeeTwo
+};
 
-
-// 38. Salary outside function , Add bonus
-
-let salaryAmount = 40000;
-
-function addBonus() {
-    let bonus = 5000;
-    console.log(salaryAmount + bonus);
-}
-
-addBonus();
+console.log("9.", mergedEmployee);
 
 
-// 39. Employee object outside function
+// 10. Copy employee object and add salary
+let employeeData = {
+    name: "Priya",
+    department: "HR"
+};
 
-let employeeInfo = {
+let employeeWithSalary = {
+    ...employeeData,
+    salary: 45000
+};
+
+console.log("10.", employeeWithSalary);
+
+
+// 11. Combine two objects with different properties
+let objectOne = {
     name: "Pushpak",
-    role: "FULL STACK Developer",
-    salary: 50000
+    age: 25
 };
 
-function showEmployee() {
-    console.log(employeeInfo.name);
-    console.log(employeeInfo.role);
-    console.log(employeeInfo.salary);
-}
-
-showEmployee();
-
-
-// 40. Two functions accessing same outer variable
-
-let companyName = "STACKLY";
-
-function showCompany() {
-    console.log(companyName);
-}
-
-function printCompany() {
-    console.log(companyName);
-}
-
-showCompany();
-printCompany();
-
-
-
-// 41. Named function
-
-function namedFunction(value) {
-    console.log(value);
-}
-
-namedFunction("Hello");
-
-
-// 42. Anonymous function stored in a variable
-
-let anonymousFunction = function(value) {
-    console.log(value);
+let objectTwo = {
+    city: "Hyderabad",
+    job: "Developer"
 };
 
-anonymousFunction("Anonymous Function");
-
-
-// 43. Arrow function with one parameter
-
-let arrowFunction = (value) => {
-    console.log(value);
+let combinedObject = {
+    ...objectOne,
+    ...objectTwo
 };
 
-arrowFunction("Arrow Function");
+console.log("11.", combinedObject);
 
 
-// 44. Arrow function with two parameters
+// 12. Create one array in reverse order using spread
+let arrayOne = [1, 2, 3];
+let arrayTwo = [4, 5, 6];
 
-let arrowAdd = (a, b) => {
-    return a + b;
+let reverseSpreadArray = [...arrayTwo.reverse(), ...arrayOne.reverse()];
+
+console.log("12.", reverseSpreadArray);
+
+
+// 13. Function with two fixed values and remaining values using rest
+function fixedAndRest(first, second, ...remaining) {
+    console.log("13. First:", first);
+    console.log("13. Second:", second);
+    console.log("13. Remaining:", remaining);
+}
+
+fixedAndRest(10, 20, 30, 40, 50, 60);
+
+
+// 14. Student function with rest parameter for marks
+function student(name, department, ...marks) {
+    console.log("14. Name:", name);
+    console.log("14. Department:", department);
+    console.log("14. Marks:", marks);
+}
+
+student("Pushpak", "CSE", 80, 85, 90, 88);
+
+
+// 15. Function with two numbers and additional numbers using rest
+function numbersWithRest(a, b, ...additionalNumbers) {
+    console.log("15. First:", a);
+    console.log("15. Second:", b);
+    console.log("15. Additional:", additionalNumbers);
+}
+
+numbersWithRest(10, 20, 30, 40, 50, 60);
+
+
+// 16. Function that prints the 5th value from rest parameter
+function fifthRestValue(a, ...values) {
+    console.log("16.", values[4]);
+}
+
+fifthRestValue(10, 20, 30, 40, 50, 60);
+
+
+// 17. Product, price, and remaining values using rest
+function productDetails(product, price, ...details) {
+    console.log("17. Product:", product);
+    console.log("17. Price:", price);
+    console.log("17. Remaining:", details);
+}
+
+productDetails("Laptop", 60000, "Dell", "16GB RAM", "512GB SSD");
+
+
+// 18. Receive 10 numbers and store values after first two using rest
+function tenNumbers(first, second, ...remainingNumbers) {
+    console.log("18. First:", first);
+    console.log("18. Second:", second);
+    console.log("18. Remaining:", remainingNumbers);
+}
+
+tenNumbers(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+
+
+// 19. Extract all four values using array destructuring
+let fourValues = [10, 20, 30, 40];
+
+let [value1, value2, value3, value4] = fourValues;
+
+console.log("19.", value1, value2, value3, value4);
+
+
+// 20. Extract first, second, and third student details
+let studentDetailsArray = ["Pushpak", "CSE", 85];
+
+let [studentName, studentDepartment, studentMarks] = studentDetailsArray;
+
+console.log("20.", studentName, studentDepartment, studentMarks);
+
+
+// 21. Extract only first and fourth values
+let fiveNumbers = [10, 20, 30, 40, 50];
+
+let [firstNumber, , , fourthNumber] = fiveNumbers;
+
+console.log("21. First:", firstNumber);
+console.log("21. Fourth:", fourthNumber);
+
+
+// 22. Nested array destructuring
+let nestedArray = [10, [20, 30]];
+
+let [nestedValue1, [nestedValue2, nestedValue3]] = nestedArray;
+
+console.log("22.", nestedValue1, nestedValue2, nestedValue3);
+
+
+// 23. Nested array with 3 levels
+let threeLevelArray = [10, [20, [30, 40]]];
+
+let [levelValue1, [levelValue2, [levelValue3, levelValue4]]] = threeLevelArray;
+
+console.log("23.", levelValue1, levelValue2, levelValue3, levelValue4);
+
+
+// 24. Employee object destructuring
+let employeeObject = {
+    name: "Pushpak",
+    designation: "Software Engineer",
+    salary: 60000
 };
 
-console.log(arrowAdd(10, 20));
+let {
+    name: employeeName,
+    designation: employeeDesignation,
+    salary: employeeSalary
+} = employeeObject;
+
+console.log("24.", employeeName, employeeDesignation, employeeSalary);
 
 
-// 45. Named, anonymous and arrow functions
-// performing the same addition
-
-function namedAdd(a, b) {
-    return a + b;
-}
-
-let anonymousAdd = function(a, b) {
-    return a + b;
+// 25. Student object destructuring
+let studentObject = {
+    name: "Sneha",
+    department: "ECE",
+    cgpa: 8.7
 };
 
-let arrowAddition = (a, b) => {
-    return a + b;
+let {
+    name: studentObjectName,
+    department: studentObjectDepartment,
+    cgpa: studentCgpa
+} = studentObject;
+
+console.log("25.", studentObjectName, studentObjectDepartment, studentCgpa);
+
+
+// 26. Extract only 3 properties from an object
+let fiveProperties = {
+    name: "Kiran",
+    age: 22,
+    city: "Hyderabad",
+    department: "CSE",
+    cgpa: 8.5
 };
 
-console.log(namedAdd(10, 20));
-console.log(anonymousAdd(10, 20));
-console.log(arrowAddition(10, 20));
+let {
+    name: fiveName,
+    city: fiveCity,
+    cgpa: fiveCgpa
+} = fiveProperties;
+
+console.log("26.", fiveName, fiveCity, fiveCgpa);
 
 
+// 27. Nested object destructuring
+let companyTeam = {
+    employee: {
+        name: "Pushpak"
+    },
+    team: {
+        members: ["Amit", "Priya", "Kiran"]
+    }
+};
+
+let {
+    employee: { name: teamEmployeeName },
+    team: { members: teamMembers }
+} = companyTeam;
+
+console.log("27. Employee:", teamEmployeeName);
+console.log("27. Team Members:", teamMembers);
 
 
-// 46. IIFE that immediately prints
-// "Hello JavaScript"
+// 28. company → department → employee nested destructuring
+let companyData = {
+    department: {
+        employee: {
+            name: "Pushpak"
+        }
+    }
+};
 
-(function() {
-    console.log("Hello JavaScript");
-})();
+let {
+    department: {
+        employee: { name: nestedEmployeeName }
+    }
+} = companyData;
 
-
-// 47. IIFE with name parameter
-
-(function(name) {
-    console.log("Hello " + name);
-})("Pushpak");
-
-
-// 48. IIFE with product and discount parameters
-
-(function(product, discount) {
-    console.log(
-        "Special Offer: " + product +
-        " with " + discount + "% discount"
-    );
-})("Laptop", 20);
+console.log("28.", nestedEmployeeName);
 
 
+// 29. Add 3 fruits using push()
+let fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
 
-// CALLBACK & HIGHER-ORDER FUNCTIONS
+fruits.push("Pineapple", "Papaya", "Watermelon");
 
-//  49. add function accepts a callback and two numbers , Add the numbers and then call the callback
-
-function addCallback(callback, a, b) {
-
-    let result = a + b;
-
-    console.log("Addition: " + result);
-
-    callback(a, b);
-}
-
-function callbackFunction(a, b) {
-    console.log("Callback executed");
-}
-
-addCallback(callbackFunction, 10, 20);
+console.log("29.", fruits);
 
 
-// 50. sub function passed as callback to add , Add first, then execute subtraction
+// 30. Remove last value using pop()
+let popNumbers = [10, 20, 30, 40, 50];
 
-function subCallback(a, b) {
-    console.log("Subtraction: " + (a - b));
-}
+popNumbers.pop();
 
-function addWithCallback(callback, a, b) {
+console.log("30.", popNumbers);
 
-    console.log("Addition: " + (a + b));
 
-    callback(a, b);
-}
+// 31. Remove first student using shift()
+let studentNames = ["Pushpak", "Priya", "Amit", "Sneha", "Kiran"];
 
-addWithCallback(subCallback, 20, 10);
+studentNames.shift();
+
+console.log("31.", studentNames);
+
+
+// 32. Add 2 numbers at the beginning using unshift()
+let unshiftNumbers = [30, 40, 50, 60];
+
+unshiftNumbers.unshift(10, 20);
+
+console.log("32.", unshiftNumbers);
+
+
+// 33. Replace 30 with 100 using splice()
+let replaceNumbers = [10, 20, 30, 40, 50];
+
+replaceNumbers.splice(2, 1, 100);
+
+console.log("33.", replaceNumbers);
+
+
+// 34. Remove 2 values from the middle using splice()
+let removeMiddle = [10, 20, 30, 40, 50, 60];
+
+removeMiddle.splice(2, 2);
+
+console.log("34.", removeMiddle);
+
+
+// 35. Add 3 new values in the middle using splice()
+let addMiddle = [10, 20, 60, 70];
+
+addMiddle.splice(2, 0, 30, 40, 50);
+
+console.log("35.", addMiddle);
+
+
+// 36. Remove 2 values and add 3 new values at same position
+let replaceMiddle = [10, 20, 30, 40, 50, 60];
+
+replaceMiddle.splice(2, 2, 100, 200, 300);
+
+console.log("36.", replaceMiddle);
+
+
+// 37. Remove one student from the middle using splice()
+let studentList = ["Pushpak", "Priya", "Amit", "Sneha", "Kiran"];
+
+studentList.splice(2, 1);
+
+console.log("37.", studentList);
+
+
+// 38. Shopping cart using push, pop, shift, and unshift
+let shoppingCart = ["Laptop", "Mouse", "Keyboard"];
+
+shoppingCart.push("Headphones");
+console.log("38. After push:", shoppingCart);
+
+shoppingCart.pop();
+console.log("38. After pop:", shoppingCart);
+
+shoppingCart.shift();
+console.log("38. After shift:", shoppingCart);
+
+shoppingCart.unshift("Monitor");
+console.log("38. After unshift:", shoppingCart);
+
+
+// 39. Merge two arrays using concat()
+let concatArray1 = [10, 20, 30];
+let concatArray2 = [40, 50, 60];
+
+let concatResult = concatArray1.concat(concatArray2);
+
+console.log("39.", concatResult);
+
+
+// 40. Merge three arrays using concat()
+let concatFirst = [1, 2];
+let concatSecond = [3, 4];
+let concatThird = [5, 6];
+
+let threeArrayResult = concatFirst.concat(concatSecond, concatThird);
+
+console.log("40.", threeArrayResult);
+
+
+// 41. Extract values from index 2 to index 5 using slice()
+let eightValues = [10, 20, 30, 40, 50, 60, 70, 80];
+
+let slicedValues = eightValues.slice(2, 6);
+
+console.log("41.", slicedValues);
+
+
+// 42. Extract first 3 students using slice()
+let sliceStudents = ["Pushpak", "Priya", "Amit", "Sneha", "Kiran"];
+
+let firstThreeStudents = sliceStudents.slice(0, 3);
+
+console.log("42.", firstThreeStudents);
+
+
+// 43. Convert 3-level nested array into single-level array using flat()
+let threeLevelNested = [1, [2, [3, 4]]];
+
+let flatThreeLevel = threeLevelNested.flat(2);
+
+console.log("43.", flatThreeLevel);
+
+
+// 44. Remove 4 levels of nesting using flat()
+let fourLevelNested = [1, [2, [3, [4, 5]]]];
+
+let flatFourLevel = fourLevelNested.flat(Infinity);
+
+console.log("44.", flatFourLevel);
+
+
+// 45. Difference between slice() and splice()
+let sliceExample = [10, 20, 30, 40, 50];
+
+let sliceResult = sliceExample.slice(1, 3);
+
+console.log("45. Original after slice:", sliceExample);
+console.log("45. Slice result:", sliceResult);
+
+let spliceExample = [10, 20, 30, 40, 50];
+
+let spliceResult = spliceExample.splice(1, 2);
+
+console.log("45. Original after splice:", spliceExample);
+console.log("45. Splice result:", spliceResult);
+
+
+// 46. Check whether 50 exists using includes()
+let includesNumbers = [10, 20, 30, 40, 50, 60];
+
+let isFiftyPresent = includesNumbers.includes(50);
+
+console.log("46.", isFiftyPresent);
+
+
+// 47. Find first occurrence using indexOf()
+let duplicateNumbers1 = [10, 20, 30, 20, 40, 20];
+
+let firstOccurrence = duplicateNumbers1.indexOf(20);
+
+console.log("47.", firstOccurrence);
+
+
+// 48. Find last occurrence using lastIndexOf()
+let duplicateNumbers2 = [10, 20, 30, 20, 40, 20];
+
+let lastOccurrence = duplicateNumbers2.lastIndexOf(20);
+
+console.log("48.", lastOccurrence);
+
+
+// 49. Sort an array of numbers
+let unsortedNumbers = [50, 10, 40, 20, 30];
+
+unsortedNumbers.sort((a, b) => a - b);
+
+console.log("49.", unsortedNumbers);
+
+
+// 50. Reverse an array
+let reverseNumbers = [10, 20, 30, 40, 50];
+
+reverseNumbers.reverse();
+
+console.log("50.", reverseNumbers);
